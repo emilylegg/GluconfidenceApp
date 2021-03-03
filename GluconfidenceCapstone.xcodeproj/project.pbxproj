@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FDBD80A125F02BF50039BF0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD80A025F02BF50039BF0B /* AppDelegate.swift */; };
+		FDBD80A325F02BF50039BF0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD80A225F02BF50039BF0B /* SceneDelegate.swift */; };
+		FDBD80A525F02BF50039BF0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD80A425F02BF50039BF0B /* ViewController.swift */; };
+		FDBD80A825F02BF50039BF0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBD80A625F02BF50039BF0B /* Main.storyboard */; };
+		FDBD80AB25F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FDBD80A925F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodeld */; };
+		FDBD80AD25F02BF60039BF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDBD80AC25F02BF60039BF0B /* Assets.xcassets */; };
+		FDBD80B025F02BF60039BF0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBD80AE25F02BF60039BF0B /* LaunchScreen.storyboard */; };
+		FDBD80BB25F02BF60039BF0B /* GluconfidenceCapstoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD80BA25F02BF60039BF0B /* GluconfidenceCapstoneTests.swift */; };
+		FDBD80C625F02BF60039BF0B /* GluconfidenceCapstoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD80C525F02BF60039BF0B /* GluconfidenceCapstoneUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDBD80B725F02BF60039BF0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBD809525F02BF50039BF0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDBD809C25F02BF50039BF0B;
+			remoteInfo = GluconfidenceCapstone;
+		};
+		FDBD80C225F02BF60039BF0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBD809525F02BF50039BF0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDBD809C25F02BF50039BF0B;
+			remoteInfo = GluconfidenceCapstone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FDBD809D25F02BF50039BF0B /* GluconfidenceCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GluconfidenceCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDBD80A025F02BF50039BF0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDBD80A225F02BF50039BF0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FDBD80A425F02BF50039BF0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDBD80A725F02BF50039BF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDBD80AA25F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GluconfidenceCapstone.xcdatamodel; sourceTree = "<group>"; };
+		FDBD80AC25F02BF60039BF0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDBD80AF25F02BF60039BF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDBD80B125F02BF60039BF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDBD80B625F02BF60039BF0B /* GluconfidenceCapstoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GluconfidenceCapstoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDBD80BA25F02BF60039BF0B /* GluconfidenceCapstoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GluconfidenceCapstoneTests.swift; sourceTree = "<group>"; };
+		FDBD80BC25F02BF60039BF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDBD80C125F02BF60039BF0B /* GluconfidenceCapstoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GluconfidenceCapstoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDBD80C525F02BF60039BF0B /* GluconfidenceCapstoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GluconfidenceCapstoneUITests.swift; sourceTree = "<group>"; };
+		FDBD80C725F02BF60039BF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDBD809A25F02BF50039BF0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBD80B325F02BF60039BF0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBD80BE25F02BF60039BF0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FDBD809425F02BF50039BF0B = {
+			isa = PBXGroup;
+			children = (
+				FDBD809F25F02BF50039BF0B /* GluconfidenceCapstone */,
+				FDBD80B925F02BF60039BF0B /* GluconfidenceCapstoneTests */,
+				FDBD80C425F02BF60039BF0B /* GluconfidenceCapstoneUITests */,
+				FDBD809E25F02BF50039BF0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDBD809E25F02BF50039BF0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDBD809D25F02BF50039BF0B /* GluconfidenceCapstone.app */,
+				FDBD80B625F02BF60039BF0B /* GluconfidenceCapstoneTests.xctest */,
+				FDBD80C125F02BF60039BF0B /* GluconfidenceCapstoneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDBD809F25F02BF50039BF0B /* GluconfidenceCapstone */ = {
+			isa = PBXGroup;
+			children = (
+				FDBD80A025F02BF50039BF0B /* AppDelegate.swift */,
+				FDBD80A225F02BF50039BF0B /* SceneDelegate.swift */,
+				FDBD80A425F02BF50039BF0B /* ViewController.swift */,
+				FDBD80A625F02BF50039BF0B /* Main.storyboard */,
+				FDBD80AC25F02BF60039BF0B /* Assets.xcassets */,
+				FDBD80AE25F02BF60039BF0B /* LaunchScreen.storyboard */,
+				FDBD80B125F02BF60039BF0B /* Info.plist */,
+				FDBD80A925F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodeld */,
+			);
+			path = GluconfidenceCapstone;
+			sourceTree = "<group>";
+		};
+		FDBD80B925F02BF60039BF0B /* GluconfidenceCapstoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDBD80BA25F02BF60039BF0B /* GluconfidenceCapstoneTests.swift */,
+				FDBD80BC25F02BF60039BF0B /* Info.plist */,
+			);
+			path = GluconfidenceCapstoneTests;
+			sourceTree = "<group>";
+		};
+		FDBD80C425F02BF60039BF0B /* GluconfidenceCapstoneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FDBD80C525F02BF60039BF0B /* GluconfidenceCapstoneUITests.swift */,
+				FDBD80C725F02BF60039BF0B /* Info.plist */,
+			);
+			path = GluconfidenceCapstoneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDBD809C25F02BF50039BF0B /* GluconfidenceCapstone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDBD80CA25F02BF60039BF0B /* Build configuration list for PBXNativeTarget "GluconfidenceCapstone" */;
+			buildPhases = (
+				FDBD809925F02BF50039BF0B /* Sources */,
+				FDBD809A25F02BF50039BF0B /* Frameworks */,
+				FDBD809B25F02BF50039BF0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GluconfidenceCapstone;
+			productName = GluconfidenceCapstone;
+			productReference = FDBD809D25F02BF50039BF0B /* GluconfidenceCapstone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDBD80B525F02BF60039BF0B /* GluconfidenceCapstoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDBD80CD25F02BF60039BF0B /* Build configuration list for PBXNativeTarget "GluconfidenceCapstoneTests" */;
+			buildPhases = (
+				FDBD80B225F02BF60039BF0B /* Sources */,
+				FDBD80B325F02BF60039BF0B /* Frameworks */,
+				FDBD80B425F02BF60039BF0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDBD80B825F02BF60039BF0B /* PBXTargetDependency */,
+			);
+			name = GluconfidenceCapstoneTests;
+			productName = GluconfidenceCapstoneTests;
+			productReference = FDBD80B625F02BF60039BF0B /* GluconfidenceCapstoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FDBD80C025F02BF60039BF0B /* GluconfidenceCapstoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDBD80D025F02BF60039BF0B /* Build configuration list for PBXNativeTarget "GluconfidenceCapstoneUITests" */;
+			buildPhases = (
+				FDBD80BD25F02BF60039BF0B /* Sources */,
+				FDBD80BE25F02BF60039BF0B /* Frameworks */,
+				FDBD80BF25F02BF60039BF0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDBD80C325F02BF60039BF0B /* PBXTargetDependency */,
+			);
+			name = GluconfidenceCapstoneUITests;
+			productName = GluconfidenceCapstoneUITests;
+			productReference = FDBD80C125F02BF60039BF0B /* GluconfidenceCapstoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDBD809525F02BF50039BF0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					FDBD809C25F02BF50039BF0B = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					FDBD80B525F02BF60039BF0B = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = FDBD809C25F02BF50039BF0B;
+					};
+					FDBD80C025F02BF60039BF0B = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = FDBD809C25F02BF50039BF0B;
+					};
+				};
+			};
+			buildConfigurationList = FDBD809825F02BF50039BF0B /* Build configuration list for PBXProject "GluconfidenceCapstone" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDBD809425F02BF50039BF0B;
+			productRefGroup = FDBD809E25F02BF50039BF0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDBD809C25F02BF50039BF0B /* GluconfidenceCapstone */,
+				FDBD80B525F02BF60039BF0B /* GluconfidenceCapstoneTests */,
+				FDBD80C025F02BF60039BF0B /* GluconfidenceCapstoneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDBD809B25F02BF50039BF0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDBD80B025F02BF60039BF0B /* LaunchScreen.storyboard in Resources */,
+				FDBD80AD25F02BF60039BF0B /* Assets.xcassets in Resources */,
+				FDBD80A825F02BF50039BF0B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBD80B425F02BF60039BF0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBD80BF25F02BF60039BF0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDBD809925F02BF50039BF0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDBD80A525F02BF50039BF0B /* ViewController.swift in Sources */,
+				FDBD80AB25F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodeld in Sources */,
+				FDBD80A125F02BF50039BF0B /* AppDelegate.swift in Sources */,
+				FDBD80A325F02BF50039BF0B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBD80B225F02BF60039BF0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDBD80BB25F02BF60039BF0B /* GluconfidenceCapstoneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDBD80BD25F02BF60039BF0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDBD80C625F02BF60039BF0B /* GluconfidenceCapstoneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDBD80B825F02BF60039BF0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDBD809C25F02BF50039BF0B /* GluconfidenceCapstone */;
+			targetProxy = FDBD80B725F02BF60039BF0B /* PBXContainerItemProxy */;
+		};
+		FDBD80C325F02BF60039BF0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDBD809C25F02BF50039BF0B /* GluconfidenceCapstone */;
+			targetProxy = FDBD80C225F02BF60039BF0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FDBD80A625F02BF50039BF0B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDBD80A725F02BF50039BF0B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDBD80AE25F02BF60039BF0B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDBD80AF25F02BF60039BF0B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDBD80C825F02BF60039BF0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDBD80C925F02BF60039BF0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDBD80CB25F02BF60039BF0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GluconfidenceCapstone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gluconfidence.GluconfidenceCapstone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDBD80CC25F02BF60039BF0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GluconfidenceCapstone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gluconfidence.GluconfidenceCapstone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDBD80CE25F02BF60039BF0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GluconfidenceCapstoneTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gluconfidence.GluconfidenceCapstoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GluconfidenceCapstone.app/GluconfidenceCapstone";
+			};
+			name = Debug;
+		};
+		FDBD80CF25F02BF60039BF0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GluconfidenceCapstoneTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gluconfidence.GluconfidenceCapstoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GluconfidenceCapstone.app/GluconfidenceCapstone";
+			};
+			name = Release;
+		};
+		FDBD80D125F02BF60039BF0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GluconfidenceCapstoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gluconfidence.GluconfidenceCapstoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GluconfidenceCapstone;
+			};
+			name = Debug;
+		};
+		FDBD80D225F02BF60039BF0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GluconfidenceCapstoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Gluconfidence.GluconfidenceCapstoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GluconfidenceCapstone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDBD809825F02BF50039BF0B /* Build configuration list for PBXProject "GluconfidenceCapstone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDBD80C825F02BF60039BF0B /* Debug */,
+				FDBD80C925F02BF60039BF0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDBD80CA25F02BF60039BF0B /* Build configuration list for PBXNativeTarget "GluconfidenceCapstone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDBD80CB25F02BF60039BF0B /* Debug */,
+				FDBD80CC25F02BF60039BF0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDBD80CD25F02BF60039BF0B /* Build configuration list for PBXNativeTarget "GluconfidenceCapstoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDBD80CE25F02BF60039BF0B /* Debug */,
+				FDBD80CF25F02BF60039BF0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDBD80D025F02BF60039BF0B /* Build configuration list for PBXNativeTarget "GluconfidenceCapstoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDBD80D125F02BF60039BF0B /* Debug */,
+				FDBD80D225F02BF60039BF0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FDBD80A925F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FDBD80AA25F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodel */,
+			);
+			currentVersion = FDBD80AA25F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodel */;
+			path = GluconfidenceCapstone.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FDBD809525F02BF50039BF0B /* Project object */;
+}
