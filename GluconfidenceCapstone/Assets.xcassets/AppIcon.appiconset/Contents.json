@@ -1,21 +1,25 @@
 {
   "images" : [
     {
+      "filename" : "GluconfidenceLogo-3.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "GluconfidenceLogo-4.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
+      "filename" : "GluconfidenceLogo-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "GluconfidenceLogo-5.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
