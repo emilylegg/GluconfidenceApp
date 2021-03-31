@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     
     if($db->createTeam($teamName, $memberCount)){
         $response['error']=false;
-        $response['message']='Team added successfully';
+        $response['message']='Team added successfully!';
         
     }else{
         $response['error']=true;

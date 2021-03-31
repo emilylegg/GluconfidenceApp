@@ -15,7 +15,7 @@ class DbOperation
     
     public function createTeam($name, $memberCount)
     {
-        $stmt = $this->conn->prepare("INSERT INTO team(name, member) values(?, ?)");
+        $stmt = $this->conn->prepare("INSERT INTO team(name, member) values(?, !)");
         $stmt->bind_param("si", $name, $memberCount);
         $result = $stmt->execute();
         $stmt->close();
