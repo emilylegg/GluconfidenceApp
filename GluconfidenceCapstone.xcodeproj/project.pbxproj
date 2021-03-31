@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2421C5E07DE6C1CBA07953B3 /* Pods_GluconfidenceCapstoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA43590A966979FCE6F0B3D /* Pods_GluconfidenceCapstoneTests.framework */; };
+		CCA23C810584A16832683686 /* Pods_GluconfidenceCapstone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AA1ECC132CA9122575A763 /* Pods_GluconfidenceCapstone.framework */; };
+		F28F96295E1EE04418E74EFF /* Pods_GluconfidenceCapstone_GluconfidenceCapstoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCED9C11DE0176DBD2AB80B /* Pods_GluconfidenceCapstone_GluconfidenceCapstoneUITests.framework */; };
 		FDBD80A125F02BF50039BF0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD80A025F02BF50039BF0B /* AppDelegate.swift */; };
 		FDBD80A325F02BF50039BF0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD80A225F02BF50039BF0B /* SceneDelegate.swift */; };
 		FDBD80A525F02BF50039BF0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD80A425F02BF50039BF0B /* ViewController.swift */; };
@@ -21,7 +24,6 @@
 		FDBD80FF25F02DAF0039BF0B /* SummariesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD80FE25F02DAF0039BF0B /* SummariesViewController.swift */; };
 		FDBD810625F02E0C0039BF0B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDBD810525F02E0C0039BF0B /* SWRevealViewController.m */; };
 		FDBD810B25F1AFA70039BF0B /* TreatmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD810A25F1AFA70039BF0B /* TreatmentViewController.swift */; };
-		FDD6A6CB25F33BD000C4DA82 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A6CA25F33BD000C4DA82 /* UserInfoViewController.swift */; };
 		FDD6A6D025F4ACB100C4DA82 /* UserDisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A6CF25F4ACB100C4DA82 /* UserDisclaimerViewController.swift */; };
 		FDD6A6D825F4AEB300C4DA82 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A6D725F4AEB300C4DA82 /* CheckBox.swift */; };
 		FDD6A6E825F58DA000C4DA82 /* DbConnect.php in Resources */ = {isa = PBXBuildFile; fileRef = FDD6A6E725F58DA000C4DA82 /* DbConnect.php */; };
@@ -29,6 +31,9 @@
 		FDD6A6F525F58F7F00C4DA82 /* DbOperation.php in Resources */ = {isa = PBXBuildFile; fileRef = FDD6A6F425F58F7F00C4DA82 /* DbOperation.php */; };
 		FDD6A6FA25F5931B00C4DA82 /* createteam.php in Resources */ = {isa = PBXBuildFile; fileRef = FDD6A6F925F5931B00C4DA82 /* createteam.php */; };
 		FDD6A70725F9476200C4DA82 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A70625F9476200C4DA82 /* CalendarViewController.swift */; };
+		FDD6A70D2603F2B800C4DA82 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FDD6A70C2603F2B800C4DA82 /* SwiftPackageProductDependency */; };
+		FDD6A712260D44ED00C4DA82 /* LowRecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A711260D44ED00C4DA82 /* LowRecoveryViewController.swift */; };
+		FDD6A717260D46B800C4DA82 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A716260D46B800C4DA82 /* PersonalInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19AA1ECC132CA9122575A763 /* Pods_GluconfidenceCapstone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GluconfidenceCapstone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AA43590A966979FCE6F0B3D /* Pods_GluconfidenceCapstoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GluconfidenceCapstoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BBAB2DE468EFD9D7CD05BF0 /* Pods-GluconfidenceCapstoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GluconfidenceCapstoneTests.debug.xcconfig"; path = "Target Support Files/Pods-GluconfidenceCapstoneTests/Pods-GluconfidenceCapstoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		40845F19302275FDDBA97343 /* Pods-GluconfidenceCapstone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GluconfidenceCapstone.debug.xcconfig"; path = "Target Support Files/Pods-GluconfidenceCapstone/Pods-GluconfidenceCapstone.debug.xcconfig"; sourceTree = "<group>"; };
+		4750CE10D249AC4D1AAB1294 /* Pods-GluconfidenceCapstoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GluconfidenceCapstoneTests.release.xcconfig"; path = "Target Support Files/Pods-GluconfidenceCapstoneTests/Pods-GluconfidenceCapstoneTests.release.xcconfig"; sourceTree = "<group>"; };
+		6CCED9C11DE0176DBD2AB80B /* Pods_GluconfidenceCapstone_GluconfidenceCapstoneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GluconfidenceCapstone_GluconfidenceCapstoneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9332397BC2AB38AABFE6E3AE /* Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests.release.xcconfig"; path = "Target Support Files/Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests/Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9483F291121A261AE20B9888 /* Pods-GluconfidenceCapstone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GluconfidenceCapstone.release.xcconfig"; path = "Target Support Files/Pods-GluconfidenceCapstone/Pods-GluconfidenceCapstone.release.xcconfig"; sourceTree = "<group>"; };
+		F16E1DB5EAFA1AE5BB6BC641 /* Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests.debug.xcconfig"; path = "Target Support Files/Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests/Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDBD809D25F02BF50039BF0B /* GluconfidenceCapstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GluconfidenceCapstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBD80A025F02BF50039BF0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDBD80A225F02BF50039BF0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +85,6 @@
 		FDBD810425F02E0B0039BF0B /* GluconfidenceCapstone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GluconfidenceCapstone-Bridging-Header.h"; sourceTree = "<group>"; };
 		FDBD810525F02E0C0039BF0B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../../Downloads/SWRevealViewController.m; sourceTree = "<group>"; };
 		FDBD810A25F1AFA70039BF0B /* TreatmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentViewController.swift; sourceTree = "<group>"; };
-		FDD6A6CA25F33BD000C4DA82 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		FDD6A6CF25F4ACB100C4DA82 /* UserDisclaimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisclaimerViewController.swift; sourceTree = "<group>"; };
 		FDD6A6D725F4AEB300C4DA82 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		FDD6A6E725F58DA000C4DA82 /* DbConnect.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = DbConnect.php; sourceTree = "<group>"; };
@@ -79,6 +92,8 @@
 		FDD6A6F425F58F7F00C4DA82 /* DbOperation.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = DbOperation.php; sourceTree = "<group>"; };
 		FDD6A6F925F5931B00C4DA82 /* createteam.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = createteam.php; sourceTree = "<group>"; };
 		FDD6A70625F9476200C4DA82 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		FDD6A711260D44ED00C4DA82 /* LowRecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowRecoveryViewController.swift; sourceTree = "<group>"; };
+		FDD6A716260D46B800C4DA82 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDD6A70D2603F2B800C4DA82 /* BuildFile in Frameworks */,
+				CCA23C810584A16832683686 /* Pods_GluconfidenceCapstone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2421C5E07DE6C1CBA07953B3 /* Pods_GluconfidenceCapstoneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +118,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F28F96295E1EE04418E74EFF /* Pods_GluconfidenceCapstone_GluconfidenceCapstoneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A74AA4E786A5E1F09AA80010 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40845F19302275FDDBA97343 /* Pods-GluconfidenceCapstone.debug.xcconfig */,
+				9483F291121A261AE20B9888 /* Pods-GluconfidenceCapstone.release.xcconfig */,
+				F16E1DB5EAFA1AE5BB6BC641 /* Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests.debug.xcconfig */,
+				9332397BC2AB38AABFE6E3AE /* Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests.release.xcconfig */,
+				2BBAB2DE468EFD9D7CD05BF0 /* Pods-GluconfidenceCapstoneTests.debug.xcconfig */,
+				4750CE10D249AC4D1AAB1294 /* Pods-GluconfidenceCapstoneTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B6B72B8225FDEBDC82DE6CCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19AA1ECC132CA9122575A763 /* Pods_GluconfidenceCapstone.framework */,
+				6CCED9C11DE0176DBD2AB80B /* Pods_GluconfidenceCapstone_GluconfidenceCapstoneUITests.framework */,
+				1AA43590A966979FCE6F0B3D /* Pods_GluconfidenceCapstoneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FDBD809425F02BF50039BF0B = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +155,8 @@
 				FDBD80B925F02BF60039BF0B /* GluconfidenceCapstoneTests */,
 				FDBD80C425F02BF60039BF0B /* GluconfidenceCapstoneUITests */,
 				FDBD809E25F02BF50039BF0B /* Products */,
+				A74AA4E786A5E1F09AA80010 /* Pods */,
+				B6B72B8225FDEBDC82DE6CCA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,9 +219,10 @@
 				FDBD80F925F02D940039BF0B /* SidebarViewController.swift */,
 				FDBD80FE25F02DAF0039BF0B /* SummariesViewController.swift */,
 				FDBD810A25F1AFA70039BF0B /* TreatmentViewController.swift */,
-				FDD6A6CA25F33BD000C4DA82 /* UserInfoViewController.swift */,
 				FDD6A6CF25F4ACB100C4DA82 /* UserDisclaimerViewController.swift */,
 				FDD6A70625F9476200C4DA82 /* CalendarViewController.swift */,
+				FDD6A711260D44ED00C4DA82 /* LowRecoveryViewController.swift */,
+				FDD6A716260D46B800C4DA82 /* PersonalInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,15 +234,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDBD80CA25F02BF60039BF0B /* Build configuration list for PBXNativeTarget "GluconfidenceCapstone" */;
 			buildPhases = (
+				4F879B2AA6087F2ECC8332FA /* [CP] Check Pods Manifest.lock */,
 				FDBD809925F02BF50039BF0B /* Sources */,
 				FDBD809A25F02BF50039BF0B /* Frameworks */,
 				FDBD809B25F02BF50039BF0B /* Resources */,
+				6813F3CB3AD0ADF94A06652B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GluconfidenceCapstone;
+			packageProductDependencies = (
+				FDD6A70C2603F2B800C4DA82 /* SwiftPackageProductDependency */,
+			);
 			productName = GluconfidenceCapstone;
 			productReference = FDBD809D25F02BF50039BF0B /* GluconfidenceCapstone.app */;
 			productType = "com.apple.product-type.application";
@@ -206,6 +256,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDBD80CD25F02BF60039BF0B /* Build configuration list for PBXNativeTarget "GluconfidenceCapstoneTests" */;
 			buildPhases = (
+				33648611480233FB7FEC69CF /* [CP] Check Pods Manifest.lock */,
 				FDBD80B225F02BF60039BF0B /* Sources */,
 				FDBD80B325F02BF60039BF0B /* Frameworks */,
 				FDBD80B425F02BF60039BF0B /* Resources */,
@@ -224,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDBD80D025F02BF60039BF0B /* Build configuration list for PBXNativeTarget "GluconfidenceCapstoneUITests" */;
 			buildPhases = (
+				53EC4398D35274A8702DC16B /* [CP] Check Pods Manifest.lock */,
 				FDBD80BD25F02BF60039BF0B /* Sources */,
 				FDBD80BE25F02BF60039BF0B /* Frameworks */,
 				FDBD80BF25F02BF60039BF0B /* Resources */,
+				74173025B3560FF60B913AE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,6 +323,9 @@
 				Base,
 			);
 			mainGroup = FDBD809425F02BF50039BF0B;
+			packageReferences = (
+				FDD6A70B2603F2B800C4DA82 /* RemoteSwiftPackageReference */,
+			);
 			productRefGroup = FDBD809E25F02BF50039BF0B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -312,6 +368,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33648611480233FB7FEC69CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GluconfidenceCapstoneTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F879B2AA6087F2ECC8332FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GluconfidenceCapstone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53EC4398D35274A8702DC16B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6813F3CB3AD0ADF94A06652B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GluconfidenceCapstone/Pods-GluconfidenceCapstone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GluconfidenceCapstone/Pods-GluconfidenceCapstone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GluconfidenceCapstone/Pods-GluconfidenceCapstone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74173025B3560FF60B913AE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests/Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests/Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests/Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDBD809925F02BF50039BF0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -324,9 +483,10 @@
 				FDBD810625F02E0C0039BF0B /* SWRevealViewController.m in Sources */,
 				FDBD80A525F02BF50039BF0B /* ViewController.swift in Sources */,
 				FDBD80AB25F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodeld in Sources */,
-				FDD6A6CB25F33BD000C4DA82 /* UserInfoViewController.swift in Sources */,
+				FDD6A717260D46B800C4DA82 /* PersonalInfoViewController.swift in Sources */,
 				FDD6A70725F9476200C4DA82 /* CalendarViewController.swift in Sources */,
 				FDD6A6D825F4AEB300C4DA82 /* CheckBox.swift in Sources */,
+				FDD6A712260D44ED00C4DA82 /* LowRecoveryViewController.swift in Sources */,
 				FDBD80A125F02BF50039BF0B /* AppDelegate.swift in Sources */,
 				FDD6A6D025F4ACB100C4DA82 /* UserDisclaimerViewController.swift in Sources */,
 				FDBD80A325F02BF50039BF0B /* SceneDelegate.swift in Sources */,
@@ -502,6 +662,7 @@
 		};
 		FDBD80CB25F02BF60039BF0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40845F19302275FDDBA97343 /* Pods-GluconfidenceCapstone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -523,6 +684,7 @@
 		};
 		FDBD80CC25F02BF60039BF0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9483F291121A261AE20B9888 /* Pods-GluconfidenceCapstone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -543,6 +705,7 @@
 		};
 		FDBD80CE25F02BF60039BF0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BBAB2DE468EFD9D7CD05BF0 /* Pods-GluconfidenceCapstoneTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -564,6 +727,7 @@
 		};
 		FDBD80CF25F02BF60039BF0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4750CE10D249AC4D1AAB1294 /* Pods-GluconfidenceCapstoneTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -585,6 +749,7 @@
 		};
 		FDBD80D125F02BF60039BF0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F16E1DB5EAFA1AE5BB6BC641 /* Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -604,6 +769,7 @@
 		};
 		FDBD80D225F02BF60039BF0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9332397BC2AB38AABFE6E3AE /* Pods-GluconfidenceCapstone-GluconfidenceCapstoneUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -661,6 +827,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FDD6A70B2603F2B800C4DA82 /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ThasianX/ElegantCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FDD6A70C2603F2B800C4DA82 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDD6A70B2603F2B800C4DA82 /* RemoteSwiftPackageReference */;
+			productName = ElegantCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FDBD80A925F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodeld */ = {

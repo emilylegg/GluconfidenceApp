@@ -32,4 +32,16 @@ class SidebarViewController: UIViewController {
         performSegue(withIdentifier: "treatment_segue", sender: nil)
         
     }
+    
+
+    @IBAction func LowActionBtn(_ sender: Any) {
+        performSegue(withIdentifier: "low_segue", sender: nil)
+        
+    }
+    
+    @IBAction func InfoActionBtn(_ sender: Any) {
+        performSegue(withIdentifier: "info_segue", sender: nil)
+        
+    }
+    
 }

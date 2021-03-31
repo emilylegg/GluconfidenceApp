@@ -6,10 +6,11 @@
 //
 
 import Foundation
-//import ElegantCalendar
+import ElegantCalendar
+//import FSCalendar
 
 class CalendarViewController: UIViewController {
-    
+    //@ObservedObject private var calendarManager: MonthlyCalendarManager
     @IBOutlet weak var refill: UIButton!
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     
@@ -18,7 +19,7 @@ class CalendarViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setMenuBtn(menuBtn)
-         title = "Summary View"
+         title = "Calendar View"
         refill.layer.cornerRadius = refill.frame.size.width/2
         refill.layer.shadowRadius = 1
         refill.layer.shadowOpacity = 0.5

@@ -19,6 +19,7 @@ class UserDisclaimerViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        buttonNext.layer.cornerRadius = 5
         
     }
     

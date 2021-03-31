@@ -7,20 +7,34 @@
 
 import Foundation
 import SwiftUI
+//import DropDown
 import UIKit
 
-class TreatmentViewController: UIViewController {
-    //Goal will be to have a checklist to see what was
+final class Cell {
+    let time: String
+    
+    init(title: String) {
+        self.time = title
+    }
+}
+class TreatmentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    //var cells = [Cell]()
+    //let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)    //Goal will be to have a checklist to see what was
     //Treated w/ GC and not GC
-    @IBOutlet weak var menuBtn: UIBarButtonItem!
-    //   @IBOutlet weak var menuBtn: UIBarButtonItem!
-    @IBOutlet weak var checkList: UIStackView!
+    
+   // @IBOutlet weak var cell: UITableViewCell!
+    //let dropDown = DropDown()
     
     @IBOutlet weak var refill: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var menuBtn: UIBarButtonItem!
+    @IBOutlet weak var numberBottles: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
        setMenuBtn(menuBtn)
         title = "Treatment View"
@@ -38,4 +52,54 @@ class TreatmentViewController: UIViewController {
       view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        //let glu = gluAction(at: indexPath)
+        let notGlu = notGluAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [notGlu])
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let complete = completeAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [complete])
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+      }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "6:30 PM"
+        //cell.textLabel.color = .gray
+        
+        return cell
+      }
+    
+    func completeAction(at indexPath: IndexPath)-> UIContextualAction {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let action = UIContextualAction(style: .destructive, title: nil) { (action, view, completion) in
+            //cell.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.reloadData()
+            completion(true)
+        }
+        action.image = UIImage(named: "bottle")
+        action.backgroundColor = UIColor(named: "HamBand")
+        return action
+    }
+    
+    func notGluAction(at indexPath: IndexPath)-> UIContextualAction {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let action = UIContextualAction(style: .destructive, title: nil) { (action, view, completion) in
+            //cell.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.reloadData()
+            completion(true)
+        }
+        action.image = UIImage(named: "not")
+        action.backgroundColor = UIColor(named: "Danger")
+        return action
+    }
 }
