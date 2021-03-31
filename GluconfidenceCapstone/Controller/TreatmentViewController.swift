@@ -26,6 +26,8 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
    // @IBOutlet weak var cell: UITableViewCell!
     //let dropDown = DropDown()
     
+    var num = 10
+    
     @IBOutlet weak var refill: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuBtn: UIBarButtonItem!
@@ -66,7 +68,7 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return num
       }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,8 +83,9 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let action = UIContextualAction(style: .destructive, title: nil) { (action, view, completion) in
             //cell.remove(at: indexPath.row)
+            self.num-=1
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            self.tableView.reloadData()
+//            self.tableView.reloadData()
             completion(true)
         }
         action.image = UIImage(named: "bottle")
@@ -94,8 +97,9 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let action = UIContextualAction(style: .destructive, title: nil) { (action, view, completion) in
             //cell.remove(at: indexPath.row)
+            self.num-=1
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            self.tableView.reloadData()
+//            self.tableView.reloadData()
             completion(true)
         }
         action.image = UIImage(named: "not")
