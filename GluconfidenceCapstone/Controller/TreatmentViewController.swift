@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-//import DropDown
+import iOSDropDown
 import UIKit
 
 final class Cell {
@@ -33,6 +33,7 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var menuBtn: UIBarButtonItem!
     @IBOutlet weak var numberBottles: UITextField!
     
+    //@IBOutlet weak var takeTreatment: DropDown!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -44,6 +45,8 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
         refill.layer.shadowRadius = 1
         refill.layer.shadowOpacity = 0.5
         refill.layer.masksToBounds = true
+        
+        //takeTreatment.optionArray = ["5 min", "10 min", "15 min"]
         
     }
     
@@ -72,9 +75,10 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
       }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = "6:30 PM"
-        //cell.textLabel.color = .gray
+        //cell.textLabel?.color = .gray
         
         return cell
       }

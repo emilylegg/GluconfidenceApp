@@ -31,9 +31,13 @@
 		FDD6A6F525F58F7F00C4DA82 /* DbOperation.php in Resources */ = {isa = PBXBuildFile; fileRef = FDD6A6F425F58F7F00C4DA82 /* DbOperation.php */; };
 		FDD6A6FA25F5931B00C4DA82 /* createteam.php in Resources */ = {isa = PBXBuildFile; fileRef = FDD6A6F925F5931B00C4DA82 /* createteam.php */; };
 		FDD6A70725F9476200C4DA82 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A70625F9476200C4DA82 /* CalendarViewController.swift */; };
-		FDD6A70D2603F2B800C4DA82 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FDD6A70C2603F2B800C4DA82 /* SwiftPackageProductDependency */; };
+		FDD6A70D2603F2B800C4DA82 /* ElegantCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = FDD6A70C2603F2B800C4DA82 /* ElegantCalendar */; };
 		FDD6A712260D44ED00C4DA82 /* LowRecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A711260D44ED00C4DA82 /* LowRecoveryViewController.swift */; };
 		FDD6A717260D46B800C4DA82 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A716260D46B800C4DA82 /* PersonalInfoViewController.swift */; };
+		FDD6A77926281A3300C4DA82 /* TimeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A77826281A3300C4DA82 /* TimeValueFormatter.swift */; };
+		FDD6A77E262884B700C4DA82 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A77D262884B700C4DA82 /* LoginViewController.swift */; };
+		FDD6A78B2628884300C4DA82 /* InitialAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A78A2628884300C4DA82 /* InitialAccountViewController.swift */; };
+		FDD6A7902628C7A200C4DA82 /* TimestampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A78F2628C7A200C4DA82 /* TimestampModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +98,10 @@
 		FDD6A70625F9476200C4DA82 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		FDD6A711260D44ED00C4DA82 /* LowRecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowRecoveryViewController.swift; sourceTree = "<group>"; };
 		FDD6A716260D46B800C4DA82 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		FDD6A77826281A3300C4DA82 /* TimeValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeValueFormatter.swift; sourceTree = "<group>"; };
+		FDD6A77D262884B700C4DA82 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FDD6A78A2628884300C4DA82 /* InitialAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAccountViewController.swift; sourceTree = "<group>"; };
+		FDD6A78F2628C7A200C4DA82 /* TimestampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD6A70D2603F2B800C4DA82 /* BuildFile in Frameworks */,
+				FDD6A70D2603F2B800C4DA82 /* ElegantCalendar in Frameworks */,
 				CCA23C810584A16832683686 /* Pods_GluconfidenceCapstone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +198,8 @@
 				FDD6A6EC25F58DD700C4DA82 /* Config.php */,
 				FDD6A6F425F58F7F00C4DA82 /* DbOperation.php */,
 				FDD6A6F925F5931B00C4DA82 /* createteam.php */,
+				FDD6A77826281A3300C4DA82 /* TimeValueFormatter.swift */,
+				FDD6A78F2628C7A200C4DA82 /* TimestampModel.swift */,
 			);
 			path = GluconfidenceCapstone;
 			sourceTree = "<group>";
@@ -223,6 +233,8 @@
 				FDD6A70625F9476200C4DA82 /* CalendarViewController.swift */,
 				FDD6A711260D44ED00C4DA82 /* LowRecoveryViewController.swift */,
 				FDD6A716260D46B800C4DA82 /* PersonalInfoViewController.swift */,
+				FDD6A77D262884B700C4DA82 /* LoginViewController.swift */,
+				FDD6A78A2628884300C4DA82 /* InitialAccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,7 +258,7 @@
 			);
 			name = GluconfidenceCapstone;
 			packageProductDependencies = (
-				FDD6A70C2603F2B800C4DA82 /* SwiftPackageProductDependency */,
+				FDD6A70C2603F2B800C4DA82 /* ElegantCalendar */,
 			);
 			productName = GluconfidenceCapstone;
 			productReference = FDBD809D25F02BF50039BF0B /* GluconfidenceCapstone.app */;
@@ -324,7 +336,7 @@
 			);
 			mainGroup = FDBD809425F02BF50039BF0B;
 			packageReferences = (
-				FDD6A70B2603F2B800C4DA82 /* RemoteSwiftPackageReference */,
+				FDD6A70B2603F2B800C4DA82 /* XCRemoteSwiftPackageReference "ElegantCalendar" */,
 			);
 			productRefGroup = FDBD809E25F02BF50039BF0B /* Products */;
 			projectDirPath = "";
@@ -478,7 +490,9 @@
 			files = (
 				FDBD80F525F02D760039BF0B /* HomeViewController.swift in Sources */,
 				FDBD80FF25F02DAF0039BF0B /* SummariesViewController.swift in Sources */,
+				FDD6A77926281A3300C4DA82 /* TimeValueFormatter.swift in Sources */,
 				FDBD80FA25F02D940039BF0B /* SidebarViewController.swift in Sources */,
+				FDD6A78B2628884300C4DA82 /* InitialAccountViewController.swift in Sources */,
 				FDBD810B25F1AFA70039BF0B /* TreatmentViewController.swift in Sources */,
 				FDBD810625F02E0C0039BF0B /* SWRevealViewController.m in Sources */,
 				FDBD80A525F02BF50039BF0B /* ViewController.swift in Sources */,
@@ -486,7 +500,9 @@
 				FDD6A717260D46B800C4DA82 /* PersonalInfoViewController.swift in Sources */,
 				FDD6A70725F9476200C4DA82 /* CalendarViewController.swift in Sources */,
 				FDD6A6D825F4AEB300C4DA82 /* CheckBox.swift in Sources */,
+				FDD6A7902628C7A200C4DA82 /* TimestampModel.swift in Sources */,
 				FDD6A712260D44ED00C4DA82 /* LowRecoveryViewController.swift in Sources */,
+				FDD6A77E262884B700C4DA82 /* LoginViewController.swift in Sources */,
 				FDBD80A125F02BF50039BF0B /* AppDelegate.swift in Sources */,
 				FDD6A6D025F4ACB100C4DA82 /* UserDisclaimerViewController.swift in Sources */,
 				FDBD80A325F02BF50039BF0B /* SceneDelegate.swift in Sources */,
@@ -829,7 +845,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FDD6A70B2603F2B800C4DA82 /* RemoteSwiftPackageReference */ = {
+		FDD6A70B2603F2B800C4DA82 /* XCRemoteSwiftPackageReference "ElegantCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ThasianX/ElegantCalendar";
 			requirement = {
@@ -840,9 +856,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FDD6A70C2603F2B800C4DA82 /* SwiftPackageProductDependency */ = {
+		FDD6A70C2603F2B800C4DA82 /* ElegantCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FDD6A70B2603F2B800C4DA82 /* RemoteSwiftPackageReference */;
+			package = FDD6A70B2603F2B800C4DA82 /* XCRemoteSwiftPackageReference "ElegantCalendar" */;
 			productName = ElegantCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
