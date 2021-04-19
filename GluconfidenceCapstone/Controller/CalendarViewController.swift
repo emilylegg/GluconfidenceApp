@@ -18,13 +18,13 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     fileprivate let gregorian: Calendar = Calendar(identifier: .gregorian)
     fileprivate lazy var dateFormatter1: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let count = 0 //will equal the number of low events
+//        let count = 0 //will equal the number of low events
         // Do any additional setup after loading the view.
         setMenuBtn(menuBtn)
          title = "Calendar View"
@@ -35,6 +35,9 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
         calendar.delegate = self
         calendar.dataSource = self
+        
+        getInfoForCalendar()
+        
     }
     
     // MARK: Create function for menu Action
@@ -45,61 +48,40 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     }
     
     
-    
-    
-    let da = Date()
+    let calendarcounts = NSMutableArray()
     
     func getInfoForCalendar(){
         
-        // set up dateformatter
-       // let dateFormatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "yyyy-MM-dd"
-        // this will set the timezone to be in UTC so that converted strings will be in UTC as well
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        
         // testing parameters
         let userid = 3
-        let count = 3
         let month = 3
         let year = 2021
-//        let beginTime = "2021-04-07 00:00:00"
-//        let endTime = "2021-04-07 23:59:00"
+
+//        let calendarcounts = NSMutableArray()
         
-        // endDate is begining of today
-        let endDate: Date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: da)) ?? da
-        // startDate is begining of yesterday
-        var dayComponent = DateComponents()
-        dayComponent.day = -1
-        let startDate: Date = Calendar.current.date(byAdding: dayComponent, to: endDate) ?? da
-        print(startDate)
+        let sem = DispatchSemaphore(value: 0)
         
-        print(endDate)
+
+        // this is request & parameters for query based on month & year
+//        let url = URL(string: "http://192.168.64.2/gluconfidence/Calendar.php")
+//        let paramString = "UserID=" + String(userid) + "&Month=" + String(month) + "&Year=" + String(year)
         
-        let beginTime = formatter.string(from: startDate)
-        let endTime = formatter.string(from: endDate)
-        let calendarcounts = NSMutableArray()
+        // this is request & parameters for query based on only year
+        let url = URL(string: "http://192.168.64.2/gluconfidence/Calendar_year.php")
+        let paramString = "UserID=" + String(userid) + "&Year=" + String(year)
+
         
-        //print(beginTime)
-       // print(endTime)
-        
- //       let parameters = ["UserID": userid, "beginTime": beginTime, "endTime": endTime]
-        guard let url = URL(string: "http://192.168.64.2/gluconfidence/calendar.php") else{return}
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
+        var request = URLRequest(url: url!)
+        request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-//        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: String.Encoding.utf8) else {return}
-//        request.httpBody = httpBody
-        let paramString = "UserID=" + String(userid) + "Month=" + String(month) + "Year=" + String(year)
+
         request.httpBody = paramString.data(using: String.Encoding.utf8)
         
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
-//            if let response = response{
-//                print(response)
-//            }
+            defer { sem.signal() }
+            
             if let data = data{
-//                    let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
                 
                 var jsonResult = NSArray()
                 
@@ -112,32 +94,44 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
                 }
 
                 var jsonElement = NSDictionary()
-                for row in jsonResult{
-                    jsonElement = row as! NSDictionary
-                    print(jsonElement["systemTime"]!)
-//                   if let date = dateFormatter.date(from: jsonElement["systemTime"] as! String) {
-//                        print(date.timeIntervalSince1970)
-//                    }
-//                    print(jsonElement["value"]!)
+                for i in 0..<jsonResult.count {
+                    jsonElement = jsonResult[i] as! NSDictionary
+//                    print(jsonElement["DATE"]!)
+//                    print(jsonElement["COUNT"]!)
+                    self.calendarcounts.add(jsonElement)
                 }
+                
+                
             }
         }.resume()
-        
+       
+        sem.wait()
     }
     
-    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor{
-        let count = 1
-        if(count==0){
-                   return UIColor.green
-               }
-               if(count==1){
-                   return UIColor.yellow
-               }
-               if(count==2){
-                   return UIColor.orange
-               }
-               if(count>=3){
-                   return UIColor.red
-               }
+    
+    
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
+        let dateString : String = dateFormatter1.string(from:date)
+
+        if(self.calendarcounts.count > 0){
+            for i in 0..<self.calendarcounts.count{
+                let calendarDict = self.calendarcounts[i] as! NSDictionary
+                if(calendarDict["DATE"] as! String == dateString){
+                    if(calendarDict["COUNT"] as! Int == 1){
+                        return UIColor.yellow
+                    }else if(calendarDict["COUNT"] as! Int == 2){
+                        return UIColor.orange
+                        
+                    }else if(calendarDict["COUNT"] as! Int >= 3){
+                        return UIColor.red
+                    }
+                }
+            }
+        }else{
+            return UIColor.green
+        }
+
+        return UIColor.green
     }
+        
 }

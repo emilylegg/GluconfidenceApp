@@ -38,6 +38,7 @@
 		FDD6A77E262884B700C4DA82 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A77D262884B700C4DA82 /* LoginViewController.swift */; };
 		FDD6A78B2628884300C4DA82 /* InitialAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A78A2628884300C4DA82 /* InitialAccountViewController.swift */; };
 		FDD6A7902628C7A200C4DA82 /* TimestampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A78F2628C7A200C4DA82 /* TimestampModel.swift */; };
+		FDD6A79F262D32D400C4DA82 /* LowEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A79E262D32D400C4DA82 /* LowEventModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		FDD6A77D262884B700C4DA82 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FDD6A78A2628884300C4DA82 /* InitialAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAccountViewController.swift; sourceTree = "<group>"; };
 		FDD6A78F2628C7A200C4DA82 /* TimestampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimestampModel.swift; sourceTree = "<group>"; };
+		FDD6A79E262D32D400C4DA82 /* LowEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowEventModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 				FDD6A6F925F5931B00C4DA82 /* createteam.php */,
 				FDD6A77826281A3300C4DA82 /* TimeValueFormatter.swift */,
 				FDD6A78F2628C7A200C4DA82 /* TimestampModel.swift */,
+				FDD6A79E262D32D400C4DA82 /* LowEventModel.swift */,
 			);
 			path = GluconfidenceCapstone;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				FDBD810625F02E0C0039BF0B /* SWRevealViewController.m in Sources */,
 				FDBD80A525F02BF50039BF0B /* ViewController.swift in Sources */,
 				FDBD80AB25F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodeld in Sources */,
+				FDD6A79F262D32D400C4DA82 /* LowEventModel.swift in Sources */,
 				FDD6A717260D46B800C4DA82 /* PersonalInfoViewController.swift in Sources */,
 				FDD6A70725F9476200C4DA82 /* CalendarViewController.swift in Sources */,
 				FDD6A6D825F4AEB300C4DA82 /* CheckBox.swift in Sources */,

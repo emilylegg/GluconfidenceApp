@@ -91,9 +91,8 @@ class HomeViewController: UIViewController {
 //        trend.image = UIImage(named: "even")
         
         setupChart()
-//        setupChartData()
         getPoints()
-        apiPercentages()
+        startHomeApi()
         
         
     }
@@ -114,10 +113,10 @@ class HomeViewController: UIViewController {
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         // this will set the timezone to be in UTC so that converted strings will be in UTC as well
-        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+       dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         
         // testing parameters
-        let userid = 3
+        let userid = 1
         
         // endDate is begining of today
         let endDate: Date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: today)) ?? today
@@ -131,6 +130,7 @@ class HomeViewController: UIViewController {
         let beginTime = dateFormatter.string(from: startDate)
         let endTime = dateFormatter.string(from: endDate)
         let timepoints = NSMutableArray()
+        
         
  //       let parameters = ["UserID": userid, "beginTime": beginTime, "endTime": endTime]
         guard let url = URL(string: "http://192.168.64.2/gluconfidence/home_24.php") else{return}
@@ -168,8 +168,7 @@ class HomeViewController: UIViewController {
 //                   if let date = dateFormatter.date(from: jsonElement["systemTime"] as! String) {
 //                        print(date.timeIntervalSince1970)
 //                    }
-//                    print(Int(jsonElement["value"] as! String) ?? 0)
-                    let timepoint = TimestampModel(time: jsonElement["systemTime"] as! String, value: Int(jsonElement["value"] as! String) ?? 0);
+                    let timepoint = TimestampModel(time: jsonElement["systemTime"] as! String, value: Int(jsonElement["value"] as! String) ?? 0)
                     timepoints.add(timepoint)
 //                    print(timepoint.description)
                 }
@@ -202,9 +201,12 @@ class HomeViewController: UIViewController {
         let xAxis = homeSnapshot.xAxis
         xAxis.valueFormatter = TimeValueFormatter()
         xAxis.axisMinimum = startDate.timeIntervalSince1970
+    
+        
         xAxis.axisMaximum = endDate.timeIntervalSince1970
         xAxis.labelPosition = .bottom
         xAxis.granularity = 14400
+
         
         homeSnapshot.setVisibleXRange(minXRange: 6 * 14400, maxXRange: 6 * 14400)
     }
@@ -221,29 +223,65 @@ class HomeViewController: UIViewController {
         if timeData.count > 0 {
             let dataSet = LineChartDataSet(entries: dataEntries, label: "")
             dataSet.mode = .cubicBezier
-    //        dataSet.setColor(.white)
-    //        dataSet.fill = Fill(color: .blue)
+    //        dataSet.setColor(.yellow)
+    //        dataSet.fill = Fill(color: .yellow)
     //        dataSet.fillAlpha = 0.5
     //        dataSet.drawFilledEnabled = true
+    //        dataSet.drawVerticalHighlightIndicatorEnabled = false
+    //        dataSet.drawHorizontalHighlightIndicatorEnabled = false
+    //        dataSet.highlightEnabled = false
             dataSet.drawCirclesEnabled = false
+            dataSet.drawValuesEnabled = false
             dataSet.lineWidth = 2
-            
             let data = LineChartData(dataSet: dataSet)
             homeSnapshot.data = data
         }
     }
     
-    func apiPercentages(){
+    func startHomeApi(){
+        
+        let userid = 1;
+        guard let url = URL(string: "http://192.168.64.2/gluconfidence/home_api.php") else{return}
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        let paramString = "UserID=" + String(userid)
+        request.httpBody = paramString.data(using: String.Encoding.utf8)
+        
+        var token = ""
+        let semToken = DispatchSemaphore(value: 0)
+        
+        let sessionToken = URLSession.shared
+        sessionToken.dataTask(with: request) { (data, response, error) in
+            defer { semToken.signal() }
+            if let data = data{
+                
+                do{
+                    token = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments) as? String ?? ""
+                    
+                } catch let error as NSError {
+                    print(error)
+                    
+                }
+                
+            }
+            
+        }.resume()
+        
+        semToken.wait()
+        apiPercentages(tokenString: token)
+//        print(token)
+    }
+    
+    
+    func apiPercentages(tokenString: String){
         
         var percentBelowRange = Float()
         var percentAboveRange = Float()
         var percentUrgentLow = Float()
         var percentWithinRange = Float()
         
-        // going to replace the access token below using result from POST request
-        let accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImFPcnJObFpZUmRES0stemZmWEZwTXZZN18wZyIsImtpZCI6ImFPcnJObFpZUmRES0stemZmWEZwTXZZN18wZyJ9.eyJpc3MiOiJodHRwczovL3VhbTEuZGV4Y29tLmNvbS9pZGVudGl0eSIsImF1ZCI6Imh0dHBzOi8vdWFtMS5kZXhjb20uY29tL2lkZW50aXR5L3Jlc291cmNlcyIsImV4cCI6MTYxODU2NTg5NywibmJmIjoxNjE4NTU4Njk3LCJjbGllbnRfaWQiOiJNbmhDYU5FdDlYcVY5MkJwZTZtVzR6MGtUWlpkMjlFUCIsInN1YiI6IjZiNDczOTcwLTY3OTItNDhhNS04ZDlhLTY4MTUwY2QyNTUyMSIsImF1dGhfdGltZSI6IjE2MTU5NTgxNjQiLCJpZHAiOiJpZHNydiIsIm1pc3NpbmdfZmllbGRzX2NvdW50IjoiMCIsImp0aSI6ImQwYTYzOTc5Njk5YTgzYWRiZTY4ODUzNjUwODM3ODQzIiwic2NvcGUiOlsiY2FsaWJyYXRpb24iLCJldmVudCIsIm9mZmxpbmVfYWNjZXNzIiwiZWd2Iiwic3RhdGlzdGljcyIsImRldmljZSJdLCJpc19jb25zZW50X3JlcXVpcmVkIjoiZmFsc2UiLCJjbnN0IjoiMiIsImNuc3RfY2xhcml0eSI6IjIiLCJjbnN0X3RlY2hzdXBwb3J0IjoiMiIsImNvdW50cnlfY29kZSI6IlVTIiwiYW1yIjpbInBhc3N3b3JkIl19.YkofBxrySjHQ1NoG3SQuV6IDJtu5rDJqT3YyYu6Fq6m8R9EUwxtxGXnYH2-dskOiKkDYCi8YjBQf7Y2iBGHFlHr5hpBs8KHBmEnE9uz5K4geaWr0Nw_nqYi_UnjCdeQbOkEc-9ulQ2mVbheWv5bzQaFDETdC5k3bXuF1asMAGyhEGP63NjI6bgQ8PED_B0QYTjF0AWUJl8YjRVyCr9YdczZYC7ZtNSbsWVhjuSWCLLdcwuW8Yw-svmLp4-1wM7GlKR9v8pA43tAP7A1NZSLSsFmrZyTwiKEvOpBS7tk8JNnuErUJQYLUYhxGTWSet2Uo1-_hQqQH9tVms1XaGIlnug"
-        
-        let authorizationToken = "Bearer " + accessToken
+        let authorizationToken = "Bearer " + tokenString
         let sem = DispatchSemaphore(value: 0)
 
         let headers = [
@@ -254,13 +292,34 @@ class HomeViewController: UIViewController {
 
         let postData = try? JSONSerialization.data(withJSONObject: parameters, options: [])
         
-        let request = NSMutableURLRequest(url: NSURL(string: "https://api.dexcom.com/v2/users/self/statistics?startDate=2021-04-15&endDate=2021-04-16")! as URL,
+        let priordays = 1
+        let endTime: Date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: today)) ?? today
+        
+        var dayComponent = DateComponents()
+        dayComponent.day = -priordays
+        let startTime: Date = Calendar.current.date(byAdding: dayComponent, to: endTime) ?? today
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        // convert time zone to utc if api request is base on utc time
+//       dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        
+        let startDate = dateFormatter.string(from: startTime)
+        let endDate = dateFormatter.string(from: endTime)
+        
+//        print(startDate)
+//        print(endDate)
+        
+        let apiUrl = "https://api.dexcom.com/v2/users/self/statistics?" + "startDate=" + startDate + "&endDate=" + endDate
+        
+        let request = NSMutableURLRequest(url: NSURL(string: apiUrl)! as URL,
               cachePolicy: .useProtocolCachePolicy,
           timeoutInterval: 10.0)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = headers
         request.httpBody = postData! as Data
-
+    
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             
@@ -273,17 +332,13 @@ class HomeViewController: UIViewController {
 //            print(httpResponse)
             do {
                 let httpData = try JSONSerialization.jsonObject(with: data!, options: []) as! NSDictionary
-                print(httpData)
+//                print(httpData)
                 
                 percentUrgentLow = (httpData["percentUrgentLow"] as? NSNumber)?.floatValue ?? 0
                 percentWithinRange = (httpData["percentWithinRange"] as? NSNumber)?.floatValue ?? 0
                 percentBelowRange = (httpData["percentBelowRange"] as? NSNumber)?.floatValue ?? 0
                 percentAboveRange = (httpData["percentAboveRange"] as? NSNumber)?.floatValue ?? 0
                 
-//                print(percentAboveRange);
-//                print(percentWithinRange);
-//                print(percentBelowRange)
-//                print(percentUrgentLow);
                 
             }catch let errorP as NSError {
                 print(errorP)
@@ -315,4 +370,5 @@ class HomeViewController: UIViewController {
         
     }
     
+
 }
