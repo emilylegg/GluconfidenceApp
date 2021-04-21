@@ -23,28 +23,30 @@ class LoginViewController: UIViewController {
         //login.layer.cornerRadius = 5
     }
     
-    @IBAction func createActionBtn(_ sender: Any) {
-        performSegue(withIdentifier: "create_segue", sender: nil)
+    @IBAction func createActionBtn(_ sender: UIButton) {
+        performSegue(withIdentifier: "createAccount_segue", sender: self)
+        
     }
     
-    let login = NSMutableArray()
+//    let login = NSMutableArray()
     
-    func getLogin(){
-        let userId = 3
+    let userDefaults = UserDefaults()
+    
+    func getLogin() -> Int{
+        
+        var user = NSDictionary();
+        var isFail = 1;
         let userName = userNameEdit.text!
         let passWord = passwordEdit.text!
         let sem = DispatchSemaphore(value: 0)
-        //let userName = userNameEdit.text!
-        //let passWord = passwordEdit.text!
-        let url = URL(string: "http://54.87.84.120/gluconfidence/Gluconfidence_Login.php")
+        let url = URL(string: "http://192.168.64.2/gluconfidence/Gluconfidence_Login.php")
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        let paramString = "UserID=" + String(userId) + "Username=" + String(userName) + "Password=" + String(passWord)
+        let paramString = "Username=" + String(userName) + "&Password=" + String(passWord)
         
         
         request.httpBody = paramString.data(using: String.Encoding.utf8)
-        //let sem = DispatchSemaphore(value: 0)
         let session = URLSession.shared
         
         session.dataTask(with: request) { (data, response, error) in
@@ -53,33 +55,43 @@ class LoginViewController: UIViewController {
             if let data = data{
 //                    let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
                 
-                var jsonResult = NSArray()
+                var loginResult = NSDictionary()
                 
                 do{
-                    jsonResult = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSArray
+                    loginResult = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSDictionary
                     
                 } catch let error as NSError {
                     print(error)
                     
                 }
-
-                var jsonElement = NSDictionary()
-                for row in jsonResult{
-                    jsonElement = row as! NSDictionary
-                    self.login.add(jsonElement)
+                if(loginResult["error"] as! NSNumber == 0){
+                    user = loginResult["user"] as! NSDictionary
+                    isFail = 0
+                }else{
+                    print(loginResult["message"]!)
                 }
-                
             }
             
         }.resume()
         
         sem.wait()
+        if(isFail == 0){
+            userDefaults.setValue(user["UserID"] as! Int, forKey: "userid")
+            userDefaults.setValue(user["FirstName"] as! String, forKey: "firstname")
+        }
+ //       print(userDefaults.value(forKey: "userid")!)
+ //       print(userDefaults.value(forKey: "firstname")!)
+        
+        return isFail
     }
 
-    @IBAction func loginActionBtn(_ sender: Any) {
-        
-       
+    @IBAction func loginActionBtn(_ sender: UIButton) {
+        let isFail = getLogin()
+        if(isFail == 0){
+            print("Success")
+//            performSegue(withIdentifier: "loginHome_segue", sender: self)
             
+        }
     }
 }
 

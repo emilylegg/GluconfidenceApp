@@ -18,6 +18,9 @@ class SummariesViewController: UIViewController {
     @IBOutlet weak var chart1: LineChartView!
     @IBOutlet weak var chart2: LineChartView!
     @IBOutlet weak var chart3: LineChartView!
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +43,7 @@ class SummariesViewController: UIViewController {
         view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
-    let userid = 3
+    let userid = (UserDefaults.standard.value(forKey: "userid") as? Int) ?? 0
     let lowEvents = NSMutableArray()
     
     func findPriorLows(){
@@ -155,6 +158,7 @@ class SummariesViewController: UIViewController {
         xAxis.valueFormatter = TimeValueFormatter()
         
         let lowTime = (lowEvents[index] as! LowEventModel).time!
+        let isGC = (lowEvents[index] as! LowEventModel).isGC!
         
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -265,6 +269,38 @@ class SummariesViewController: UIViewController {
             data.addDataSet(dataSet3)
             data.addDataSet(dataSet4)
             chart.data = data
+        }
+        
+        // change timeozne back to current so the string could be in current timezone and not UTC
+        dateFormatter.timeZone = TimeZone.current
+        var labelString = dateFormatter.string(from: lowDate)
+        
+        if(isGC == 0){
+            labelString = "Not Gluconfidence " + labelString
+        }else{
+            labelString = "Gluconfidence " + labelString
+        }
+        if(index == 0){
+            label1.text = labelString
+            if(isGC == 0){
+                label1.backgroundColor = .red
+            }else{
+                label1.backgroundColor = .blue
+            }
+        }else if index == 1 {
+            label2.text = labelString
+            if(isGC == 0){
+                label2.backgroundColor = .red
+            }else{
+                label2.backgroundColor = .blue
+            }
+        }else{
+            label3.text = labelString
+            if(isGC == 0){
+                label3.backgroundColor = .red
+            }else{
+                label3.backgroundColor = .blue
+            }
         }
     }
     

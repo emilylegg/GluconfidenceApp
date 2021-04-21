@@ -26,10 +26,6 @@
 		FDBD810B25F1AFA70039BF0B /* TreatmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD810A25F1AFA70039BF0B /* TreatmentViewController.swift */; };
 		FDD6A6D025F4ACB100C4DA82 /* UserDisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A6CF25F4ACB100C4DA82 /* UserDisclaimerViewController.swift */; };
 		FDD6A6D825F4AEB300C4DA82 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A6D725F4AEB300C4DA82 /* CheckBox.swift */; };
-		FDD6A6E825F58DA000C4DA82 /* DbConnect.php in Resources */ = {isa = PBXBuildFile; fileRef = FDD6A6E725F58DA000C4DA82 /* DbConnect.php */; };
-		FDD6A6ED25F58DD700C4DA82 /* Config.php in Resources */ = {isa = PBXBuildFile; fileRef = FDD6A6EC25F58DD700C4DA82 /* Config.php */; };
-		FDD6A6F525F58F7F00C4DA82 /* DbOperation.php in Resources */ = {isa = PBXBuildFile; fileRef = FDD6A6F425F58F7F00C4DA82 /* DbOperation.php */; };
-		FDD6A6FA25F5931B00C4DA82 /* createteam.php in Resources */ = {isa = PBXBuildFile; fileRef = FDD6A6F925F5931B00C4DA82 /* createteam.php */; };
 		FDD6A70725F9476200C4DA82 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A70625F9476200C4DA82 /* CalendarViewController.swift */; };
 		FDD6A70D2603F2B800C4DA82 /* ElegantCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = FDD6A70C2603F2B800C4DA82 /* ElegantCalendar */; };
 		FDD6A712260D44ED00C4DA82 /* LowRecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD6A711260D44ED00C4DA82 /* LowRecoveryViewController.swift */; };
@@ -92,10 +88,6 @@
 		FDBD810A25F1AFA70039BF0B /* TreatmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentViewController.swift; sourceTree = "<group>"; };
 		FDD6A6CF25F4ACB100C4DA82 /* UserDisclaimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisclaimerViewController.swift; sourceTree = "<group>"; };
 		FDD6A6D725F4AEB300C4DA82 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
-		FDD6A6E725F58DA000C4DA82 /* DbConnect.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = DbConnect.php; sourceTree = "<group>"; };
-		FDD6A6EC25F58DD700C4DA82 /* Config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = Config.php; sourceTree = "<group>"; };
-		FDD6A6F425F58F7F00C4DA82 /* DbOperation.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = DbOperation.php; sourceTree = "<group>"; };
-		FDD6A6F925F5931B00C4DA82 /* createteam.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = createteam.php; sourceTree = "<group>"; };
 		FDD6A70625F9476200C4DA82 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		FDD6A711260D44ED00C4DA82 /* LowRecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowRecoveryViewController.swift; sourceTree = "<group>"; };
 		FDD6A716260D46B800C4DA82 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
@@ -196,10 +188,6 @@
 				FDBD80B125F02BF60039BF0B /* Info.plist */,
 				FDBD80A925F02BF60039BF0B /* GluconfidenceCapstone.xcdatamodeld */,
 				FDBD810425F02E0B0039BF0B /* GluconfidenceCapstone-Bridging-Header.h */,
-				FDD6A6E725F58DA000C4DA82 /* DbConnect.php */,
-				FDD6A6EC25F58DD700C4DA82 /* Config.php */,
-				FDD6A6F425F58F7F00C4DA82 /* DbOperation.php */,
-				FDD6A6F925F5931B00C4DA82 /* createteam.php */,
 				FDD6A77826281A3300C4DA82 /* TimeValueFormatter.swift */,
 				FDD6A78F2628C7A200C4DA82 /* TimestampModel.swift */,
 				FDD6A79E262D32D400C4DA82 /* LowEventModel.swift */,
@@ -357,10 +345,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD6A6F525F58F7F00C4DA82 /* DbOperation.php in Resources */,
-				FDD6A6ED25F58DD700C4DA82 /* Config.php in Resources */,
-				FDD6A6E825F58DA000C4DA82 /* DbConnect.php in Resources */,
-				FDD6A6FA25F5931B00C4DA82 /* createteam.php in Resources */,
 				FDBD80B025F02BF60039BF0B /* LaunchScreen.storyboard in Resources */,
 				FDBD80AD25F02BF60039BF0B /* Assets.xcassets in Resources */,
 				FDBD80A825F02BF50039BF0B /* Main.storyboard in Resources */,

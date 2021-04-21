@@ -11,11 +11,13 @@ import SwiftUI
 
 class SidebarViewController: UIViewController {
 
+    let firstname = (UserDefaults.standard.value(forKey: "firstname") as? String) ?? "There";
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-         title = "Hello, Tony"
+         title = "Hello, " + firstname
     }
 
     @IBAction func CalendarActionBtn(_ sender: Any) {

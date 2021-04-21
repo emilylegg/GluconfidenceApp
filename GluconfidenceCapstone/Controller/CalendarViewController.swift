@@ -47,13 +47,13 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
-    
+//    let userid = 1
+    let userid = (UserDefaults.standard.value(forKey: "userid") as? Int) ?? 0
     let calendarcounts = NSMutableArray()
     
     func getInfoForCalendar(){
         
         // testing parameters
-        let userid = 3
         let month = 3
         let year = 2021
 
@@ -96,15 +96,12 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
                 var jsonElement = NSDictionary()
                 for i in 0..<jsonResult.count {
                     jsonElement = jsonResult[i] as! NSDictionary
-//                    print(jsonElement["DATE"]!)
-//                    print(jsonElement["COUNT"]!)
                     self.calendarcounts.add(jsonElement)
                 }
                 
                 
             }
         }.resume()
-       
         sem.wait()
     }
     

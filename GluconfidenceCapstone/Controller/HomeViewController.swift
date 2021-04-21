@@ -31,6 +31,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var belowPercent: UILabel!
     @IBOutlet weak var lowPercent: UILabel!
     
+    let userid = (UserDefaults.standard.value(forKey: "userid") as? Int) ?? 0
+    
+    var priordays = 1
+    var token = ""
+    
     let parameters = ["targetRanges": [
         [
           "name": "day",
@@ -75,7 +80,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         setMenuBtn(menuBtn)
         title = "Home View"
@@ -93,6 +97,7 @@ class HomeViewController: UIViewController {
         setupChart()
         getPoints()
         startHomeApi()
+//        print(userid)
         
         
     }
@@ -115,30 +120,23 @@ class HomeViewController: UIViewController {
         // this will set the timezone to be in UTC so that converted strings will be in UTC as well
        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         
-        // testing parameters
-        let userid = 1
-        
         // endDate is begining of today
         let endDate: Date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: today)) ?? today
         // startDate is begining of yesterday
         var dayComponent = DateComponents()
         dayComponent.day = -1
         let startDate: Date = Calendar.current.date(byAdding: dayComponent, to: endDate) ?? today
-//        print(startDate)
-//        print(endDate)
         
         let beginTime = dateFormatter.string(from: startDate)
         let endTime = dateFormatter.string(from: endDate)
         let timepoints = NSMutableArray()
         
         
- //       let parameters = ["UserID": userid, "beginTime": beginTime, "endTime": endTime]
         guard let url = URL(string: "http://192.168.64.2/gluconfidence/home_24.php") else{return}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-//        guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: String.Encoding.utf8) else {return}
-//        request.httpBody = httpBody
+
         let paramString = "UserID=" + String(userid) + "&beginTime=" + beginTime + "&endTime=" + endTime
         request.httpBody = paramString.data(using: String.Encoding.utf8)
         let sem = DispatchSemaphore(value: 0)
@@ -207,7 +205,7 @@ class HomeViewController: UIViewController {
         xAxis.labelPosition = .bottom
         xAxis.granularity = 14400
 
-        
+        homeSnapshot.legend.enabled = false
         homeSnapshot.setVisibleXRange(minXRange: 6 * 14400, maxXRange: 6 * 14400)
     }
         
@@ -223,8 +221,6 @@ class HomeViewController: UIViewController {
         if timeData.count > 0 {
             let dataSet = LineChartDataSet(entries: dataEntries, label: "")
             dataSet.mode = .cubicBezier
-    //        dataSet.setColor(.yellow)
-    //        dataSet.fill = Fill(color: .yellow)
     //        dataSet.fillAlpha = 0.5
     //        dataSet.drawFilledEnabled = true
     //        dataSet.drawVerticalHighlightIndicatorEnabled = false
@@ -240,7 +236,6 @@ class HomeViewController: UIViewController {
     
     func startHomeApi(){
         
-        let userid = 1;
         guard let url = URL(string: "http://192.168.64.2/gluconfidence/home_api.php") else{return}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -248,7 +243,6 @@ class HomeViewController: UIViewController {
         let paramString = "UserID=" + String(userid)
         request.httpBody = paramString.data(using: String.Encoding.utf8)
         
-        var token = ""
         let semToken = DispatchSemaphore(value: 0)
         
         let sessionToken = URLSession.shared
@@ -257,7 +251,7 @@ class HomeViewController: UIViewController {
             if let data = data{
                 
                 do{
-                    token = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments) as? String ?? ""
+                    self.token = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments) as? String ?? ""
                     
                 } catch let error as NSError {
                     print(error)
@@ -292,7 +286,6 @@ class HomeViewController: UIViewController {
 
         let postData = try? JSONSerialization.data(withJSONObject: parameters, options: [])
         
-        let priordays = 1
         let endTime: Date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: today)) ?? today
         
         var dayComponent = DateComponents()
@@ -371,4 +364,16 @@ class HomeViewController: UIViewController {
     }
     
 
+    @IBAction func didChangeSegment(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            priordays = 1
+            
+        }else if sender.selectedSegmentIndex == 1 {
+            priordays = 7
+        }else{
+            priordays = 30
+        }
+        apiPercentages(tokenString: token)
+    }
+    
 }

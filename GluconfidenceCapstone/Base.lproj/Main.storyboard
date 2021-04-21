@@ -19,6 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="AaY-bj-jj6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Lcd-Xg-OLS"/>
                     <connections>
                         <segue destination="Wua-TK-B2C" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="6dY-fk-OKa"/>
                         <segue destination="Vfs-45-or5" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="LWh-jU-hM3"/>
@@ -133,20 +134,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Mh-kK-AE8" userLabel="Line Chart 1" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="10" y="114" width="374" height="197"/>
+                                <rect key="frame" x="10" y="114" width="374" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tbo-Mj-Ca6" userLabel="Line Chart 2" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="10" y="350" width="374" height="197"/>
+                                <rect key="frame" x="10" y="350" width="374" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wrp-SQ-rBl" userLabel="Line Chart 3" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="10" y="595" width="374" height="197"/>
+                                <rect key="frame" x="10" y="595" width="374" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vL5-C4-UZQ" userLabel="Label 2">
+                                <rect key="frame" x="25" y="550" width="350" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BZQ-zg-Pma" userLabel="Label 3">
+                                <rect key="frame" x="25" y="790" width="350" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Data Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bY4-RQ-ga4" userLabel="Label 1">
+                                <rect key="frame" x="25" y="310" width="350" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rEl-B8-ycM"/>
                         <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
@@ -174,6 +196,9 @@
                         <outlet property="chart1" destination="1Mh-kK-AE8" id="ag7-24-WUM"/>
                         <outlet property="chart2" destination="Tbo-Mj-Ca6" id="oDY-aT-xYu"/>
                         <outlet property="chart3" destination="Wrp-SQ-rBl" id="sAA-to-uBK"/>
+                        <outlet property="label1" destination="bY4-RQ-ga4" id="D8K-wM-ZNr"/>
+                        <outlet property="label2" destination="vL5-C4-UZQ" id="hn3-MS-CPp"/>
+                        <outlet property="label3" destination="BZQ-zg-Pma" id="214-Aa-k7k"/>
                         <outlet property="menuBtn" destination="rPf-70-p0T" id="vll-W2-OCb"/>
                         <outlet property="refill" destination="r0R-9u-Lzr" id="nnK-GE-knV"/>
                     </connections>
@@ -210,6 +235,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vfs-45-or5" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="o9D-Vh-A4Z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6vi-Gd-ozl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -240,6 +266,9 @@
                                     <segment title="Monthly"/>
                                 </segments>
                                 <color key="tintColor" name="PrimaryLabel"/>
+                                <connections>
+                                    <action selector="didChangeSegment:" destination="0JN-Gr-AQd" eventType="valueChanged" id="dcD-AD-eB2"/>
+                                </connections>
                             </segmentedControl>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VBk-OC-Qle">
                                 <rect key="frame" x="102" y="217" width="206" height="4"/>
@@ -789,6 +818,7 @@
         <scene sceneID="UoL-81-7Xg">
             <objects>
                 <navigationController id="CpP-ww-6Jy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xMJ-e1-rC3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="Tcg-3y-Ywt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -829,13 +859,13 @@
                                 <rect key="frame" x="136" y="322" width="238" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fr-f7-d4q">
                                 <rect key="frame" x="136" y="398" width="238" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYj-HZ-tGF">
                                 <rect key="frame" x="45" y="573" width="120" height="30"/>
@@ -883,6 +913,7 @@
                         <outlet property="forgotUser" destination="bYj-HZ-tGF" id="qph-Xs-Pei"/>
                         <outlet property="passwordEdit" destination="6fr-f7-d4q" id="dZV-Uc-KLk"/>
                         <outlet property="userNameEdit" destination="JJY-gd-zY7" id="ihn-Ya-4L4"/>
+                        <segue destination="mFI-13-2Rt" kind="show" identifier="createAccount_segue" id="Pt4-SG-rgd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0q-T2-S4o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1458,6 +1489,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Pt4-SG-rgd"/>
         <segue reference="LWh-jU-hM3"/>
     </inferredMetricsTieBreakers>
     <resources>
