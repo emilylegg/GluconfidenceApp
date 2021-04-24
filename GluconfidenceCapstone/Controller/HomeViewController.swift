@@ -88,6 +88,7 @@ class HomeViewController: UIViewController {
         refill.layer.shadowOpacity = 0.5
         
         refill.layer.masksToBounds = true
+
         //segmentHome.backgroundColor = .success
 //        quickNumber.backgroundColor = UIColor(patternImage: UIImage(named: "even")!)
 //        quickNumber.text = "75" + "\n mg/dL"
@@ -143,7 +144,7 @@ class HomeViewController: UIViewController {
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             defer { sem.signal() }
-            //            if let response = response{
+//            if let response = response{
 //                print(response)
 //            }
             if let data = data{
@@ -162,10 +163,6 @@ class HomeViewController: UIViewController {
                 var jsonElement = NSDictionary()
                 for row in jsonResult{
                     jsonElement = row as! NSDictionary
-//                    print(jsonElement["systemTime"]!)
-//                   if let date = dateFormatter.date(from: jsonElement["systemTime"] as! String) {
-//                        print(date.timeIntervalSince1970)
-//                    }
                     let timepoint = TimestampModel(time: jsonElement["systemTime"] as! String, value: Int(jsonElement["value"] as! String) ?? 0)
                     timepoints.add(timepoint)
 //                    print(timepoint.description)

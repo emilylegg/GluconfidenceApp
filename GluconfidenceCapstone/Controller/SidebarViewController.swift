@@ -21,7 +21,8 @@ class SidebarViewController: UIViewController {
     }
 
     @IBAction func CalendarActionBtn(_ sender: Any) {
-        performSegue(withIdentifier: "calendar_segue", sender: nil)    }
+        performSegue(withIdentifier: "calendar_segue", sender: nil)
+    }
     
     @IBAction func SummariesActionBtn(_ sender: Any) {
         performSegue(withIdentifier: "summary_segue", sender: nil)
@@ -37,7 +38,8 @@ class SidebarViewController: UIViewController {
     }
 
     @IBAction func LowActionBtn(_ sender: Any) {
-        performSegue(withIdentifier: "low_segue", sender: nil)    }
+        performSegue(withIdentifier: "low_segue", sender: nil)
+    }
     
     @IBAction func InfoActionBtn(_ sender: Any) {
         performSegue(withIdentifier: "info_segue", sender: nil)

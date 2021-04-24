@@ -87,10 +87,10 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginActionBtn(_ sender: UIButton) {
         let isFail = getLogin()
+//        print(isFail)
         if(isFail == 0){
             print("Success")
-//            performSegue(withIdentifier: "loginHome_segue", sender: self)
-            
+            performSegue(withIdentifier: "home1_segue", sender: self)
         }
     }
 }

@@ -286,6 +286,7 @@ class SummariesViewController: UIViewController {
                 label1.backgroundColor = .red
             }else{
                 label1.backgroundColor = .blue
+                label1.textColor = .white
             }
         }else if index == 1 {
             label2.text = labelString
@@ -293,6 +294,7 @@ class SummariesViewController: UIViewController {
                 label2.backgroundColor = .red
             }else{
                 label2.backgroundColor = .blue
+                label2.textColor = .white
             }
         }else{
             label3.text = labelString
@@ -300,6 +302,7 @@ class SummariesViewController: UIViewController {
                 label3.backgroundColor = .red
             }else{
                 label3.backgroundColor = .blue
+                label3.textColor = .white
             }
         }
     }

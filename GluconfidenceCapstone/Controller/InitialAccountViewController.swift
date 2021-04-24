@@ -32,6 +32,7 @@ class InitialAccountViewController: UIViewController{
     @IBOutlet weak var chatInput: DropDown!
     @IBOutlet weak var refill: UINavigationItem!
     @IBOutlet weak var subscriptionInput: UITextField!
+   // @IBOutlet weak var refill: UIButton!
     
     
     
@@ -40,7 +41,6 @@ class InitialAccountViewController: UIViewController{
         //submit.layer.cornerRadius = 5
         scrollView.contentSize = CGSize(width: 400, height: 1000)
         //submitActionBtn.layer.cornerRadius = 5
-        
         
         medInput.optionArray = ["DPP-4 Inhibitor", "SGLT2 Inhibitor","Metforrmin", "None","Other"]
         typeInput.optionArray = ["1","2", "Prediabetic"]

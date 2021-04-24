@@ -22,7 +22,7 @@
                     <navigationItem key="navigationItem" id="Lcd-Xg-OLS"/>
                     <connections>
                         <segue destination="Wua-TK-B2C" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="6dY-fk-OKa"/>
-                        <segue destination="Vfs-45-or5" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="LWh-jU-hM3"/>
+                        <segue destination="CpP-ww-6Jy" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="dP4-QZ-crA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzg-K3-ogL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -96,7 +96,7 @@
                                 </state>
                                 <connections>
                                     <action selector="LowActionBtn:" destination="jaW-Yd-D1Y" eventType="touchUpInside" id="6oE-XQ-fsj"/>
-                                    <segue destination="svQ-Q1-rft" kind="custom" identifier="low_segue" customClass="SWRevealViewControllerSeguePushController" id="7vl-I3-uUc"/>
+                                    <segue destination="svQ-Q1-rft" kind="custom" identifier="low_segue" customClass="SWRevealViewControllerSeguePushController" id="AId-f2-QN7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GL9-41-3uM">
@@ -188,7 +188,7 @@
                                 <color key="titleShadowColor" name="SecondaryLabel"/>
                             </state>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="action" id="boL-1x-KCQ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="2" style="plain" id="boL-1x-KCQ">
                             <color key="tintColor" name="PrimaryLabel"/>
                         </barButtonItem>
                     </navigationItem>
@@ -366,12 +366,12 @@
                             <color key="tintColor" name="PrimaryLabel"/>
                         </barButtonItem>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JH1-xc-fq0">
-                            <rect key="frame" x="185" y="0.0" width="44" height="44"/>
+                            <rect key="frame" x="185.5" y="0.0" width="43.5" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" name="PrimaryLabel"/>
                             <state key="normal" image="GluconfidenceLogo"/>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="icloud.circle.fill" catalog="system" id="EGf-QO-kgc">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="2" id="EGf-QO-kgc">
                             <color key="tintColor" name="PrimaryLabel"/>
                         </barButtonItem>
                     </navigationItem>
@@ -392,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QzX-xa-gvN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1861" y="-60"/>
+            <point key="canvasLocation" x="2104" y="-92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sJK-IM-H8D">
@@ -571,9 +571,10 @@
                                 <color key="textColor" name="SecondaryLabel"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTd-mA-aKh" customClass="DropDown" customModule="iOSDropDown">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No Selection" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTd-mA-aKh" customClass="DropDown" customModule="iOSDropDown">
                                 <rect key="frame" x="20" y="395" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" name="SecondaryLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -622,7 +623,7 @@
                                 <color key="textColor" name="SecondaryLabel"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKL-co-oWg" customClass="DropDown" customModule="iOSDropDown">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No Selection" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKL-co-oWg" customClass="DropDown" customModule="iOSDropDown">
                                 <rect key="frame" x="20" y="478" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" name="SecondaryLabel"/>
@@ -658,7 +659,7 @@
                                 <color key="textColor" name="SecondaryLabel"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAM-z1-ksg" customClass="DropDown" customModule="iOSDropDown">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No Selection" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MAM-z1-ksg" customClass="DropDown" customModule="iOSDropDown">
                                 <rect key="frame" x="16" y="714" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" name="SecondaryLabel"/>
@@ -680,7 +681,7 @@
                                 <color key="textColor" name="SecondaryLabel"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vny-l4-h35" customClass="DropDown" customModule="iOSDropDown">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No Selection" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vny-l4-h35" customClass="DropDown" customModule="iOSDropDown">
                                 <rect key="frame" x="16" y="558" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" name="SecondaryLabel"/>
@@ -702,7 +703,7 @@
                                 <color key="textColor" name="SecondaryLabel"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qEI-Vg-G5c" customClass="DropDown" customModule="iOSDropDown">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="No Selection" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qEI-Vg-G5c" customClass="DropDown" customModule="iOSDropDown">
                                 <rect key="frame" x="271" y="558" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" name="SecondaryLabel"/>
@@ -752,7 +753,7 @@
                             <color key="backgroundColor" name="PrimaryLabel"/>
                             <state key="normal" image="GluconfidenceLogo"/>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil.circle.fill" catalog="system" id="bHs-pI-REZ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="2" id="bHs-pI-REZ">
                             <color key="tintColor" name="PrimaryLabel"/>
                         </barButtonItem>
                     </navigationItem>
@@ -783,7 +784,7 @@
         <!--Low Recovery View-->
         <scene sceneID="pNK-Rq-JOE">
             <objects>
-                <viewController title="Low Recovery View" id="d8N-2R-n0L" customClass="LowRecoveryViewController" sceneMemberID="viewController">
+                <viewController title="Low Recovery View" id="d8N-2R-n0L" customClass="LowRecoveryViewController" customModule="GluconfidenceCapstone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1pZ-KM-rBf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -792,22 +793,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="4F3-gR-30d">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3" catalog="system" id="5va-ex-Sy1">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="jlh-Bx-zQz">
                             <color key="tintColor" name="PrimaryLabel"/>
                         </barButtonItem>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KNC-gS-P07">
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R5A-dg-ZPk">
                             <rect key="frame" x="185" y="0.0" width="44" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" name="PrimaryLabel"/>
+                            <color key="tintColor" name="PrimaryLabel"/>
                             <state key="normal" image="GluconfidenceLogo"/>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash.circle.fill" catalog="system" id="hLN-It-uC5">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="2" id="hLN-It-uC5">
                             <color key="tintColor" name="PrimaryLabel"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuBtn" destination="5va-ex-Sy1" id="TBt-l9-fB5"/>
-                        <outlet property="refill" destination="KNC-gS-P07" id="vbb-PW-bpd"/>
+                        <outlet property="menuBtn" destination="jlh-Bx-zQz" id="2LZ-95-iml"/>
+                        <outlet property="refill" destination="R5A-dg-ZPk" id="hl4-14-lc5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bqo-gv-BYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -868,7 +870,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYj-HZ-tGF">
-                                <rect key="frame" x="45" y="573" width="120" height="30"/>
+                                <rect key="frame" x="24" y="573" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Forgot Username">
                                     <color key="titleColor" name="HamBand"/>
@@ -882,18 +884,18 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8F-5e-UK8">
-                                <rect key="frame" x="156" y="626" width="107" height="30"/>
+                                <rect key="frame" x="142" y="623" width="107" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" name="QuickArrow"/>
                                 </state>
                                 <connections>
                                     <action selector="createActionBtn:" destination="8Ut-A9-HTR" eventType="touchUpInside" id="9pL-ok-e93"/>
-                                    <segue destination="xw6-n7-S63" kind="custom" identifier="create_segue" customClass="SWRevealViewControllerSeguePushController" id="WlL-XL-vAM"/>
+                                    <segue destination="mFI-13-2Rt" kind="show" identifier="createAccount_segue" id="h5s-KX-ZBa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBZ-gI-qOP">
-                                <rect key="frame" x="117" y="496" width="184" height="69"/>
+                                <rect key="frame" x="105" y="496" width="181" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="HamBand"/>
                                 <state key="normal" title="Login">
@@ -901,8 +903,13 @@
                                 </state>
                                 <connections>
                                     <action selector="loginActionBtn:" destination="8Ut-A9-HTR" eventType="touchUpInside" id="a2Q-KR-C9P"/>
+                                    <segue destination="Vfs-45-or5" kind="custom" identifier="home1_segue" customClass="SWRevealViewControllerSeguePushController" id="nt2-RO-mOu"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gluconfidence Logo" translatesAutoresizingMaskIntoConstraints="NO" id="BGQ-3O-ENZ">
+                                <rect key="frame" x="87" y="119" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JMT-s3-YIG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -913,7 +920,6 @@
                         <outlet property="forgotUser" destination="bYj-HZ-tGF" id="qph-Xs-Pei"/>
                         <outlet property="passwordEdit" destination="6fr-f7-d4q" id="dZV-Uc-KLk"/>
                         <outlet property="userNameEdit" destination="JJY-gd-zY7" id="ihn-Ya-4L4"/>
-                        <segue destination="mFI-13-2Rt" kind="show" identifier="createAccount_segue" id="Pt4-SG-rgd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0q-T2-S4o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -948,7 +954,7 @@
                             <color key="backgroundColor" name="PrimaryLabel"/>
                             <state key="normal" image="GluconfidenceLogo"/>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" catalog="system" id="LlP-ID-4yf">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="2" id="LlP-ID-4yf">
                             <color key="tintColor" name="PrimaryLabel"/>
                         </barButtonItem>
                     </navigationItem>
@@ -1039,7 +1045,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34X-AS-W08" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2616" y="1928"/>
+            <point key="canvasLocation" x="2852" y="1928"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CVo-di-gd4">
@@ -1079,7 +1085,7 @@
                                 <color key="tintColor" name="PrimaryLabel"/>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G3R-oZ-tqJ">
-                                <rect key="frame" x="20" y="232" width="374" height="621"/>
+                                <rect key="frame" x="20" y="268" width="374" height="585"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -1090,19 +1096,35 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urg-eV-0WY" customClass="DropDown" customModule="iOSDropDown">
-                                                    <rect key="frame" x="139" y="4" width="97" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5 Minutes After" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urg-eV-0WY" customClass="DropDown" customModule="iOSDropDown">
+                                                    <rect key="frame" x="210" y="4" width="128" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="urg-eV-0WY" secondAttribute="trailing" constant="36" id="k31-uQ-7uC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's See How We're Doing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNX-DC-Asm">
                                 <rect key="frame" x="87" y="114" width="240" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="SecondaryLabel"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Low Occurred" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeF-e9-JvD">
+                                <rect key="frame" x="20" y="233" width="107" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="SecondaryLabel"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Treatment Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oja-Kj-8bz">
+                                <rect key="frame" x="241" y="233" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="SecondaryLabel"/>
                                 <nil key="highlightedColor"/>
@@ -1130,7 +1152,7 @@
                             <color key="backgroundColor" name="PrimaryLabel"/>
                             <state key="normal" image="GluconfidenceLogo"/>
                         </button>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="icloud.circle.fill" catalog="system" id="oJ2-dr-duR">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="2" id="oJ2-dr-duR">
                             <color key="tintColor" name="PrimaryLabel"/>
                         </barButtonItem>
                     </navigationItem>
@@ -1472,7 +1494,7 @@
                         <outlet property="medInput" destination="3xz-bs-es2" id="p4P-YO-GcO"/>
                         <outlet property="name" destination="OIe-0V-gK4" id="dxQ-1q-AZh"/>
                         <outlet property="passwordInput" destination="qxH-ES-pcw" id="0C0-6e-z7X"/>
-                        <outlet property="refill" destination="dTW-07-ivh" id="hrB-4W-fUK"/>
+                        <outlet property="refill" destination="OFc-sD-Ge5" id="XqV-i7-lky"/>
                         <outlet property="scrollView" destination="zs9-3x-uZ6" id="xLU-3p-QLm"/>
                         <outlet property="sexInput" destination="bqH-F1-lZn" id="THM-cl-7Uc"/>
                         <outlet property="subscriptionInput" destination="teF-6w-Z2A" id="Bia-eh-gk3"/>
@@ -1489,16 +1511,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Pt4-SG-rgd"/>
-        <segue reference="LWh-jU-hM3"/>
+        <segue reference="h5s-KX-ZBa"/>
+        <segue reference="c8v-et-DoI"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="2" width="28.5" height="28.5"/>
+        <image name="Gluconfidence Logo" width="436" height="294"/>
         <image name="GluconfidenceLogo" width="43.5" height="43.5"/>
-        <image name="icloud.circle.fill" catalog="system" width="128" height="121"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="trash.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="Danger">
             <color red="0.80699998140335083" green="0.086999997496604919" blue="0.17200000584125519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
