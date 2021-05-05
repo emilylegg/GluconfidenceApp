@@ -35,7 +35,6 @@ class InitialAccountViewController: UIViewController{
    // @IBOutlet weak var refill: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //submit.layer.cornerRadius = 5
@@ -53,7 +52,6 @@ class InitialAccountViewController: UIViewController{
     
     @IBAction func submitActionBtn(_ sender: Any) {
         
-        let userId = 3
         guard let url = URL(string: "http://54.87.84.120/gluconfidence/Gluconfidence_Login.php")else{return}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -79,7 +77,7 @@ class InitialAccountViewController: UIViewController{
             "Activity_Level":activityInput.text!,
             "Join_GC_Chat_Group":chatInput.text!,
             "Subscri[tion":subscriptionInput.text!
-               ]
+        ]
         
         AF.request(url, method: .post, parameters: parameters).responseJSON
             {
