@@ -31,6 +31,8 @@ class PersonalInfoViewController: UIViewController {
     @IBOutlet weak var glubottleInput: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
+    let userid = (UserDefaults.standard.value(forKey: "userid") as? Int) ?? 0
+
     //@IBOutlet weak var refill: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
