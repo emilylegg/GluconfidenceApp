@@ -52,7 +52,7 @@ class InitialAccountViewController: UIViewController{
     
     @IBAction func submitActionBtn(_ sender: Any) {
         
-        guard let url = URL(string: "http://54.87.84.120/gluconfidence/Gluconfidence_Login.php")else{return}
+        guard let url = URL(string: "http://54.87.84.120/Gluconfidence_Signup.php")else{return}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")

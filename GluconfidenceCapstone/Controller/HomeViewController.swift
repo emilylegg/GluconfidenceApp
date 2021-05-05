@@ -133,7 +133,7 @@ class HomeViewController: UIViewController {
         let timepoints = NSMutableArray()
         
         
-        guard let url = URL(string: "http://192.168.64.2/gluconfidence/home_24.php") else{return}
+        guard let url = URL(string: "http://54.87.84.120/home_24.php") else{return}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -233,7 +233,7 @@ class HomeViewController: UIViewController {
     
     func startHomeApi(){
         
-        guard let url = URL(string: "http://192.168.64.2/gluconfidence/home_api.php") else{return}
+        guard let url = URL(string: "http://54.87.84.120/home_api.php") else{return}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")

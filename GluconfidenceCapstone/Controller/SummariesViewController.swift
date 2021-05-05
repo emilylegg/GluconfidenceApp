@@ -47,7 +47,7 @@ class SummariesViewController: UIViewController {
     let lowEvents = NSMutableArray()
     
     func findPriorLows(){
-        guard let url = URL(string: "http://192.168.64.2/gluconfidence/PriorLow_lows.php") else{return}
+        guard let url = URL(string: "http://54.87.84.120/PriorLow_lows.php") else{return}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -94,7 +94,7 @@ class SummariesViewController: UIViewController {
     func findRelevantPoints(index: Int){
         let timepoints = NSMutableArray()
         
-        guard let urlSearch = URL(string: "http://192.168.64.2/gluconfidence/PriorLow_times.php") else{return}
+        guard let urlSearch = URL(string: "http://54.87.84.120/PriorLow_times.php") else{return}
         var request = URLRequest(url: urlSearch)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")

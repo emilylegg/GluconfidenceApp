@@ -63,11 +63,11 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         
 
         // this is request & parameters for query based on month & year
-//        let url = URL(string: "http://192.168.64.2/gluconfidence/Calendar.php")
+//        let url = URL(string: "http://54.87.84.120/Calendar.php")
 //        let paramString = "UserID=" + String(userid) + "&Month=" + String(month) + "&Year=" + String(year)
         
         // this is request & parameters for query based on only year
-        let url = URL(string: "http://192.168.64.2/gluconfidence/Calendar_year.php")
+        let url = URL(string: "http://54.87.84.120/Calendar_year.php")
         let paramString = "UserID=" + String(userid) + "&Year=" + String(year)
 
         

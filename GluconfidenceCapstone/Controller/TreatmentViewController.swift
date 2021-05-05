@@ -76,7 +76,7 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func getNullLows(){
-        guard let url = URL(string: "http://192.168.64.2/gluconfidence/Treatment_load.php") else{return}
+        guard let url = URL(string: "http://54.87.84.120/Treatment_load.php") else{return}
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -179,7 +179,7 @@ class TreatmentViewController: UIViewController, UITableViewDataSource, UITableV
     
     func updateGCAction(action: Int, index: Int){
         let sem = DispatchSemaphore(value: 0)
-        let url = URL(string: "http://192.168.64.2/gluconfidence/Treatment_update.php")
+        let url = URL(string: "http://54.87.84.120/Treatment_update.php")
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")

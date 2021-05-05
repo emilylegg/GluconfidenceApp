@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
         let userName = userNameEdit.text!
         let passWord = passwordEdit.text!
         let sem = DispatchSemaphore(value: 0)
-        let url = URL(string: "http://192.168.64.2/gluconfidence/Gluconfidence_Login.php")
+        let url = URL(string: "http://54.87.84.120/Gluconfidence_Login.php")
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
